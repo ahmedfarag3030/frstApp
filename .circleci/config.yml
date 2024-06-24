@@ -15,11 +15,14 @@ jobs:
     steps:
       - checkout
       - run: 
-          name: install site dep..
+          name: install dependencies
           command: npm install
       - run: 
-          name: build app
+          name: build
           command: npm run build
+      - run: 
+          name: deploy
+          command: npm run deploy
 
 workflows: 
   # define name
