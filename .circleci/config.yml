@@ -12,12 +12,12 @@ jobs:
     docker: cimg/node:18.20.0
     # define steps
     steps:
-      run: 
-        name: install site dep..
-        command: npm install
-      run: 
-        name: build app
-        command: npm run build
+      - run: 
+          name: install site dep..
+          command: npm install
+      - run: 
+          name: build app
+          command: npm run build
 
 workflows: 
   # define name
