@@ -1,0 +1,29 @@
+#  define version
+version: 2.1
+
+# define orbs
+orbs: 
+  node: circleci/node@5.0.0
+
+# define jobs
+jobs:
+  # define jp name
+  build:
+    docker: cimg/node:18.20.0
+    # define steps
+    steps:
+      run: 
+        name: install site dep..
+        command: npm install
+      run: 
+        name: build app
+        command: npm run build
+
+workflows: 
+  # define name
+  build-deploy:
+    jobs:
+      - build :
+          filters: 
+            branches: 
+              only: development
