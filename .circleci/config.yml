@@ -13,6 +13,7 @@ jobs:
       - image: cimg/node:18.20.0
     # define steps
     steps:
+      - checkout
       - run: 
           name: install site dep..
           command: npm install
