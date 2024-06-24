@@ -9,7 +9,8 @@ orbs:
 jobs:
   # define jp name
   build:
-    docker: cimg/node:18.20.0
+    docker: 
+      - image: cimg/node:18.20.0
     # define steps
     steps:
       - run: 
